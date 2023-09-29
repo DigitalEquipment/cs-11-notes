@@ -176,6 +176,27 @@ float decimal_variable = 3.14;
 auto var = 6; //actually int
 auto bar = 4.55; //actually double
 ```
+## Strings
+---
+- Strings are essentially lists of characters that can be used for words, sentences, etc.
+```cpp
+#include <string>
+string word = "Words!";
+```
+- Strings can have methods that allow for manipulations and other data to be pulled
+### .substr()
+- The `.substr()` method allows for pulling certain parts of the string out. It takes two arguments, the first for the starting position in the string, and the second for how much to pull from the string
+```cpp
+int position = 0;
+int amount_of_characters = 1;
+cout << word.substr(position, amount_of_characters); //outputs "W"
+cout << word.substr(1, 3); //outputs "ord"
+```
+### .length()
+- Returns the length of the string as an `int`
+```cpp
+cout << word.length(); //outputs 6
+```
 # Math
 ---
 ## Arithmetic
@@ -408,7 +429,6 @@ switch (num)
         break;
 }
 ```
-### TESTER LINE
 # Libraries
 ---
 ## C++ Standard Library Header Files
