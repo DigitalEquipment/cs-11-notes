@@ -58,7 +58,7 @@ getline(cin, stringname);
 	**Output** `String Name Johnson`
 # Iteration
 ---
-## For
+## for()
 ---
 - A `for()` loop takes 3 arguments.
 ```cpp
@@ -68,7 +68,7 @@ for(intitialize; condition; increment_decrement)
 }
 ```
 During initialize, the for loop will create variables written there. Then, while looping, the for loop will verify the condition, then increment or decrement according to the code written.
-## While
+## while()
 ---
 - A `while()` loop takes one condition.
 ```cpp
@@ -77,7 +77,15 @@ while(condition_is_true)
     //loopcode
 }
 ```
-A while loop will run until the condition no longer equates to tu
+A while loop will run until the condition no longer equates to true.
+## do{} while();
+---
+- A `do{} while()` loop is similar in operation to a while loop, with the single exception that the `while()` condition is tested after the loop code is executed instead of before.
+```cpp
+do {
+	//loop code
+} while(condition_is_true);
+```
 # Variables
 ---
 - Variables are an essential part of programming. Variables store values that can be referenced, modified, and output. Variables can be hard defined in the program, be used as a modifiable storage spot, as a connector for user input, as a connector for output and more.
@@ -197,6 +205,23 @@ cout << word.substr(1, 3); //outputs "ord"
 ```cpp
 cout << word.length(); //outputs 6
 ```
+### .at()
+- Returns the character at the position specified in a given string
+```cpp
+cout << word.at(3); //outputs "r"
+```
+### \[]
+- Same as `.at`
+```cpp
+cout << word[3]; //outputs "r"
+```
+## Booleans
+---
+### bool
+- The `bool` type represents a boolean variable, which is a variable that represents the `true` or `false` states.
+```cpp
+bool state = true;
+```
 # Math
 ---
 ## Arithmetic
@@ -220,15 +245,15 @@ x / y;
 ```
 ### Remainder/Modulus
 ```cpp
-x % y;
+x % y; //returns the remainder of x/y
 ```
 ### Increment
 ```cpp
-x++;
+x++; //x = x + 1
 ```
 ### Decrement
 ```cpp
-x--;
+x--; //x = x -1
 ```
 ## Useful Division and Modulus values
 ---
@@ -268,6 +293,7 @@ var2 = pow(var1, 2)
 ## Operators
 ---
 - Comparison and logical operators are used to perform logic operations
+- When stacking conditions, you must use the boolean `&&` or the boolean `||`. An expression `0 < x < 5` will cause errors because if x is greater than 0, this will become 1 to represent true, which will then be less than 5. If x were to equal a number of 5 or greater, this expression will provide an incorrect return. The correct way to write this expression is `x > 0 && x < 5`.
 ### >
 - The `>` comparison operator functions the same as it does in math. It outputs true if the first argument is greater than the second argument.
 ```cpp
@@ -276,7 +302,7 @@ int other_num = 4;
 int another_num = 15;
 cout << (num > other_num) << "\n"; //outputs 1
 cout << (num > another_num) << "\n"; //outputs 0
-```
+
 ### >=
 - The `>=` comparison operator is similar to `>`, except that equivalency also returns true.
 ```cpp
@@ -348,6 +374,30 @@ if(in < 10)
 else
 {
     out = 1;
+}
+```
+### !
+- `!` is the operator for `NOT`. Adding `!` ahead of operators, variables, etc. will invert the return
+```cpp
+int x = 15;
+int y = 42;
+cout << x == !y; //returns 1
+cout << x !< y; //returns 0
+```
+### &&
+- `&&` is a boolean `AND`. When added between comparisons, it passes each comparison through a logical `AND`
+```cpp
+if(num1 < 5 && num2 == 30 && num3 != 4)
+{
+    //Conditional Code, only runs if num1 is less than 5 AND num2 equals 30 AND num3 doesn't equal 4
+}
+```
+### ||
+- `||` is a boolean `OR`. When added between comparisons, it passes each comparison through a logical `OR`
+```cpp
+if(num1 < 5 || num2 == 30 || num3 != 4)
+{
+    //Conditional Code, only runs if num1 is less than 5 OR num2 equals 30 OR num3 doesn't equal 4
 }
 ```
 ### Lexicographic Ordering
@@ -437,3 +487,5 @@ switch (num)
 - `<iostream>` adds standard input/output to your C++ project.
 ### cmath
 - `cmath` adds a variety of complex math functions
+### iomanip
+- `iomanip` adds a variety of methods that allow for the manipulation and editing of IO
