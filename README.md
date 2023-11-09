@@ -14,6 +14,27 @@ This comment
 is much longer
 */
 ```
+# Functions
+---
+- Functions are the building blocks of programs
+- Functions can take inputs and return outputs
+```cpp
+int main(//arguments)
+{
+    //function code
+    return ret_value;
+}
+```
+- The main function represents a program's entry point. Other functions can be declared as such:
+```cpp
+double functionator(int conjunction, double junction)
+{
+    //function code
+    double output;
+    return output;
+}
+```
+- The function `functionator` can be called in the program by typing `functionator()`. The function returns a type `double` and takes the arguments integer `conjunction` and double `junction`. At the end of its execution, `functionator()` will return double `output`.
 # Output
 ---
 ## cout
@@ -222,6 +243,29 @@ cout << word[3]; //outputs "r"
 ```cpp
 bool state = true;
 ```
+## Arrays
+---
+### 1D Arrays
+- An array can be any data type, and is declared by adding square brackets to the end of the variable. The number in the square brackets is the length of the array.
+```cpp
+int ary[5] = {6, 9, 4, 2, 0};
+```
+- In C++, all the values in an array can be set to 0 by declaring:
+```cpp
+int zer[7] = {0};
+```
+- An array will also auto-size to the number of initial values:
+```cpp
+int marget[] = {1, 2, 3, 4, 5, 6, 7, 8 ,9};
+//Array is now sized 9
+```
+### 2D Arrays
+- A 2D array is an array that has elements which contain arrays. They are declared by adding a second set of square brackets to the end of the declaration.
+```cpp
+int mlr[5][5] = {0};
+```
+
+
 # Math
 ---
 ## Arithmetic
